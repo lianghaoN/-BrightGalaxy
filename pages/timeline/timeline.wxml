@@ -1,0 +1,48 @@
+<!-- <swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{4}}" wx:key>
+    <image src="https://image.weilanwl.com/img/4x3-{{index+1}}.jpg" mode='aspectFill'></image>
+  </swiper-item>
+</swiper> -->
+<view class="cu-bar search bg-white">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索历史事件" confirm-type="search" bindinput="searchDetail"></input>
+  </view>
+  <!-- <navigator url="/pages/searchResults/searchResults" open-type="navigate"> -->
+    <view class="action">
+    <button bindtap="searchHistory" class="cu-btn bg-brown shadow-blur round">搜索</button>
+  </view>
+  <!-- </navigator> -->
+</view>
+
+<view class="VerticalBox">
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - 110rpx)">
+    <view class="cu-item {{index==TabCur?'text-brown cur':''}}" wx:for="{{icon}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 110rpx)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{icon}}" wx:key id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-brown'></text> {{item.name}}
+        </view>
+      </view>
+      <!-- <view class="cu-list menu-avatar"> -->
+        <view class="cu-timeline" wx:for="{{item.list}}" wx:for-index="idx" wx:for-item='cell' wx:key='line'>
+          <view class="cu-time">{{cell.time}}</view>
+          <view class="cu-item">
+            <view class="content" bindtap='JumpDetail' id='{{item.id}}-{{idx}}'>
+              <view class="cu-capsule radius" style="max-width:350rpx">
+                <view class="cu-tag bg-brown">{{cell.title}}</view>
+                <view class="cu-tag line-brown">{{cell.time}}</view>
+              </view>
+              <view class="margin-top">{{cell.text}}</view>
+            </view>
+          </view>
+        </view>
+      <!-- </view> -->
+
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/lineDetail/lineDetail.wxml-->
+<!-- <text>pages/lineDetail/lineDetail.wxml</text> -->
+<!-- 标题 -->
+<view class=" bg-brown event-head">
+  <view class="event-head-dot"></view>
+  <text class="event-head-text">{{dynasty}}</text>
+</view>
+<!-- 时间轴展示 -->
+<view class="cu-timeline" wx:for="{{list}}" wx:for-index="idx" wx:key='line'>
+  <view class="cu-time">{{item.time}}</view>
+  <view class="cu-item">
+    <view class="content" bindtap='JumpDetail' id='{{idx}}'>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-brown">{{item.title}}</view>
+        <view class="cu-tag line-brown">{{item.time}}</view>
+      </view>
+      <view class="margin-top">{{item.text}}</view>
+    </view>
+  </view>
+</view>

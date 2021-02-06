@@ -1,0 +1,70 @@
+/* pages/me/me.wxss */
+.me{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.me-list{
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #e7ecfb;
+  box-shadow: 0 0 30px rgba(211, 220, 248, .3);
+  padding: 10px;
+  margin-top: 15px;
+}
+.me-feedback{
+  height: 50px;
+  margin: 5% 0 0 8%;
+}
+.me-about{
+  height: 30px;
+  margin: 0 0 0 8%;
+}
+.headbox{
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #e7ecfb;
+  box-shadow: 0 0 30px rgba(211, 220, 248, .3);
+  padding: 10px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.headimg{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 75rpx;
+  margin-top: 5%;
+}
+.username{
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20rpx;
+}
+.outlogin{
+  position: absolute;
+  width: 100%;
+  bottom: 100rpx;
+}
+button::after {
+  border: none;
+}
+button {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  line-height:inherit;
+  border: 0;
+}
+button {
+  border-radius:0;
+}
+.button-hover{
+  background-color: transparent;
+}

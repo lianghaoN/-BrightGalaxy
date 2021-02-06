@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/timeline/timeline",
+    "pages/logEvent/logEvent",
+    "pages/today/today",
+    "pages/me/me",
+    "pages/eventDetail/eventDetail",
+    "pages/personalLine/personalLine",
+    "pages/todayList/todayList",
+    "pages/lineDetail/lineDetail",
+    "pages/searchResults/searchResults",
+    "pages/feedback/feedback",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "星河璀璨",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#3894FF",
+    "list": [
+      {
+        "pagePath": "pages/timeline/timeline",
+        "iconPath": "images/salescenter.png",
+        "selectedIconPath": "images/salescenterselected.png",
+        "text": "时间轴"
+      },
+      {
+        "pagePath": "pages/personalLine/personalLine",
+        "iconPath": "images/creditcard.png",
+        "selectedIconPath": "images/creditcardselected.png",
+        "text": "记事"
+      },
+      {
+        "pagePath": "pages/logEvent/logEvent",
+        "iconPath": "images/addcell.png",
+        "selectedIconPath": "images/addcellselected.png",
+        "text": "添加"
+      },
+      {
+        "pagePath": "pages/today/today",
+        "iconPath": "images/earth.png",
+        "selectedIconPath": "images/earthselected.png",
+        "text": "Today"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/vip.png",
+        "selectedIconPath": "images/vip.png",
+        "text": "我"
+      }
+    ]
+  }
+}
